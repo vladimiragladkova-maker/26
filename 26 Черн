@@ -1,0 +1,59 @@
+# include <iostream>;
+# include <conio.h>;
+
+using namespace std;
+
+int main() {
+
+	setlocale(0, " ");
+
+	int answer;
+	int answer1;
+	string nik1;
+	string nik2;
+	string Figure1;
+	string Figure2;
+	string color1;
+	string color2;
+
+	string color_white = "\x1b[0m";
+	string color_red = "\x1b[31m";
+	string color_blue = "\x1b[34m";
+	string color_f = "\x1b[35m";
+	string color_yellow = "\x1b[33m";
+	string color_green = "\x1b[32m";
+	string color_light_blue = "\x1b[36m";
+
+
+
+	cout << color_white << "__________________________________________________[Меню]_______________________________________________________________________" << endl << "[ 1 ] Начать игру" << endl << "[ 2 ] Статистика" << endl << "[ 3 ] Настройки" << endl << "[ 4 ] Выйти" << endl;
+	answer = _getch();
+	system("cls");
+	if (answer == '3')
+	{
+		while (Y != 0)
+		{
+			cout << color_yellow << " + " << color_white << " | Настройки игрока" << endl << endl << color_yellow << " 1 " << color_white << "| Игрок 1" << endl << color_yellow << " 2 " << color_white << "| Игрок 2" << endl << endl << color_yellow << " > " << color_white << "| Ввод: ";
+			answer1 = _getch();
+			system("cls");
+			if (answer1 == '1')
+			{
+				cout << color_yellow << " + " << color_white << "| Настройки игрока " << color_yellow << "[ 1 ]" << endl << endl << color_yellow << " 1 " << color_white << "| Ник         : ";
+				cin >> nik1;
+				cout << endl << color_yellow << " 1 " << color_white << "| Фигура         : ";
+				cin >> Figure1;
+				cout << endl << color_yellow << " 1 " << color_white << "| Фигура         : ";
+				cin >> color1;
+			}
+			if (answer1 == '2')
+			{
+				cout << color_yellow << " + " << color_white << "| Настройки игрока " << color_yellow << "[ 2 ]" << endl << endl << color_yellow << " 1 " << color_white << "| Ник         : ";
+				cin >> nik2;
+				cout << endl << color_yellow << " 1 " << color_white << "| Фигура         : ";
+				cin >> Figure2;
+				cout << endl << color_yellow << " 1 " << color_white << "| Фигура         : ";
+				cin >> color2;
+			}
+		}
+	}
+}
