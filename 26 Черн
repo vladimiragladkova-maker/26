@@ -5,10 +5,31 @@ using namespace std;
 
 int main() {
 
-	setlocale(0, " ");
+	setlocale(0, "");
 
 	int answer;
 	int answer1;
+	int answer2;
+	answer2 = '1';
+	int answer3 = '1';
+	int answer4;
+
+	float W1 = 0;
+	float Ow1 = W1 * 5;
+	float W2 = 0;
+	float Ow2 = W2 * 5;
+	float L1 = 0;
+	float Ol1 = L1 * 6;
+	float L2 = 0;
+	float Ol2 = L2 * 6;
+	float D1 = 0;
+	float Od1 = D1 * 1.2;
+	float D2 = 0;
+	float Od2 = D2 * 1.2;
+
+	float O1 = Ow1 - Ol1 - Od1;
+	float O2 = Ow2 - Ol2 - Od2;
+
 	string nik1;
 	string nik2;
 	string Figure1;
@@ -25,35 +46,123 @@ int main() {
 	string color_light_blue = "\x1b[36m";
 
 
-
-	cout << color_white << "__________________________________________________[Меню]_______________________________________________________________________" << endl << "[ 1 ] Начать игру" << endl << "[ 2 ] Статистика" << endl << "[ 3 ] Настройки" << endl << "[ 4 ] Выйти" << endl;
-	answer = _getch();
-	system("cls");
-	if (answer == '3')
+	while (answer3 != 4)
 	{
-		while (Y != 0)
+		answer2 = 1;
+		cout << color_white << "______________________________________________[Меню]________________________________________________________" << endl << color_yellow << " 1 " << color_white << "| Начать игру " << endl << color_yellow << " 2 " << color_white << "| Статистика " << endl << color_yellow << " 3 " << color_white << "| Настройки " << endl << color_yellow << " 4 " << color_white << "| Выйти " << endl << color_yellow << " > " << color_white << "| Ввод: ";
+		answer = _getch();
+		system("cls");
+		if (answer == '1')
 		{
-			cout << color_yellow << " + " << color_white << " | Настройки игрока" << endl << endl << color_yellow << " 1 " << color_white << "| Игрок 1" << endl << color_yellow << " 2 " << color_white << "| Игрок 2" << endl << endl << color_yellow << " > " << color_white << "| Ввод: ";
-			answer1 = _getch();
+			cout << color_yellow << " + " << color_white << "| Крестики нолики " << endl << endl << color_yellow << " 1 " << color_white << "| Одиночная игра " << endl << color_yellow << " 2 " << color_white << "| Два игрока " << endl << endl << color_yellow << " 0 " << color_white << "| Назад " << endl << endl << color_yellow << " > " << color_white << "| Ввод: ";
+			answer4 = _getch();
 			system("cls");
-			if (answer1 == '1')
+			if (answer4 == '2')
 			{
-				cout << color_yellow << " + " << color_white << "| Настройки игрока " << color_yellow << "[ 1 ]" << endl << endl << color_yellow << " 1 " << color_white << "| Ник         : ";
-				cin >> nik1;
-				cout << endl << color_yellow << " 1 " << color_white << "| Фигура         : ";
-				cin >> Figure1;
-				cout << endl << color_yellow << " 1 " << color_white << "| Фигура         : ";
-				cin >> color1;
+				cout << color_yellow << " + " << color_white << "| Крестики нолики " << endl << endl << "      1 | 2 | 3" << endl << "      _ _ _ _ _" << endl << "      4 | 5 | 6" << endl << "      _ _ _ _ _" << endl << "      7 | 8 | 9" << endl << endl << color_yellow << " > " << color_white << "| Ходит " << color1 << nik1 << color_white << " : ";
 			}
-			if (answer1 == '2')
+			answer2 = _getch();
+			system("cls");
+		}
+		if (answer == '2')
+		{
+			while (answer2 != '0')
 			{
-				cout << color_yellow << " + " << color_white << "| Настройки игрока " << color_yellow << "[ 2 ]" << endl << endl << color_yellow << " 1 " << color_white << "| Ник         : ";
-				cin >> nik2;
-				cout << endl << color_yellow << " 1 " << color_white << "| Фигура         : ";
-				cin >> Figure2;
-				cout << endl << color_yellow << " 1 " << color_white << "| Фигура         : ";
-				cin >> color2;
+				cout << color_yellow << " + " << color_white << " | Статистика" << endl << endl << color_green << "                   W" << color_red << "         L" << color_light_blue << "        D" << color_white << "   |    Очки" << endl << color_yellow << " 1 " << color_white << "| Игрок 1" << "       " << W1 << "         " << L1 << "        " << D1 << color_white << "   |    " << color_yellow << O1 << endl << color_yellow << " 2 " << color_white << "| Игрок 2" << "       " << W1 << "         " << L1 << "        " << D1 << color_white << "   |    " << color_yellow << O2 << endl << endl << color_yellow << " 0 " << color_white << "| Назад " << endl << endl << color_yellow << " > " << color_white << "| Ввод: ";
+				answer2 = _getch();
+				system("cls");
 			}
 		}
+		if (answer == '3')
+		{
+			while (answer2 != '0')
+			{
+				cout << color_yellow << " + " << color_white << " | Настройки игрока" << endl << endl << color_yellow << " 1 " << color_white << "| Игрок 1" << endl << color_yellow << " 2 " << color_white << "| Игрок 2" << endl << endl << color_yellow << " > " << color_white << "| Ввод: ";
+				answer1 = _getch();
+				system("cls");
+				if (answer1 == '1')
+				{
+					cout << color_yellow << " + " << color_white << "| Настройки игрока " << color_yellow << "[ 1 ]" << endl << endl << color_yellow << " 1 " << color_white << "| Ник         : ";
+					cin >> nik1;
+					cout << endl << color_yellow << " 1 " << color_white << "| Фигура         : ";
+					cin >> Figure1;
+					cout << endl << color_yellow << " 1 " << color_white << "| Цвет           : ";
+					cin >> color1;
+					if (color1 == "белый")
+					{
+						color1 = color_white;
+					}
+					if (color1 == "красный")
+					{
+						color1 = color_red;
+					}
+					if (color1 == "синий")
+					{
+						color1 = color_blue;
+					}
+					if (color1 == "фиолетовый")
+					{
+						color1 = color_f;
+					}
+					if (color1 == "желтый")
+					{
+						color1 = color_yellow;
+					}
+					if (color1 == "зеленый")
+					{
+						color1 = color_green;
+					}
+					if (color1 == "голубой")
+					{
+						color1 = color_light_blue;
+					}
+				}
+				if (answer1 == '2')
+				{
+					cout << color_yellow << " + " << color_white << "| Настройки игрока " << color_yellow << "[ 2 ]" << endl << endl << color_yellow << " 1 " << color_white << "| Ник         : ";
+					cin >> nik2;
+					cout << endl << color_yellow << " 1 " << color_white << "| Фигура         : ";
+					cin >> Figure2;
+					cout << endl << color_yellow << " 1 " << color_white << "| Цвет           : ";
+					cin >> color2;
+					if (color2 == "белый")
+					{
+						color2 = color_white;
+					}
+					if (color2 == "красный")
+					{
+						color2 = color_red;
+					}
+					if (color2 == "синий")
+					{
+						color2 = color_blue;
+					}
+					if (color2 == "фиолетовый")
+					{
+						color2 = color_f;
+					}
+					if (color2 == "желтый")
+					{
+						color2 = color_yellow;
+					}
+					if (color2 == "зеленый")
+					{
+						color2 = color_green;
+					}
+					if (color2 == "голубой")
+					{
+						color2 = color_light_blue;
+					}
+				}
+				cout << endl << endl << endl << color_yellow << " 0 " << color_white << "| Меню " << endl << color_yellow << " 1 " << color_white << "| Настройки " << endl << color_yellow << " > " << color_white << "| Ввод: ";
+				answer2 = _getch();
+				system("cls");
+			}
+		}
+		if (answer == '4')
+		{
+			answer3 = 4;
+		}
 	}
+	// недоделано
 }
