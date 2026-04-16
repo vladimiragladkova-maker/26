@@ -16,6 +16,8 @@ int main() {
 	answer2 = '1';
 	int answer3 = '1';
 	int answer4;
+	string answer5;
+	string Liar_NO = " ";
 
 	float W1 = 0;
 	float Ow1 = W1 * 5;
@@ -30,15 +32,15 @@ int main() {
 	float D2 = 0;
 	float Od2 = D2 * 1.2;
 
-	float O1 = Ow1 - Ol1 - Od1;
-	float O2 = Ow2 - Ol2 - Od2;
+	float O1 = W1 * 5 - L1 * 6 - D1 * 1.2;
+	float O2 = W2 * 5 - L2 * 5 - D2 * 1.2;
 
-	string nik1;
-	string nik2;
-	string Figure1;
-	string Figure2;
-	string color1;
-	string color2;
+	string nik1 = "Игрок 1";
+	string nik2 = "Игрок 2";
+	string Figure1 = "X";
+	string Figure2 = "0";
+	string color1 = "\x1b[36m";
+	string color2 = "\x1b[0m";
 
 
 	string p1 = "1";
@@ -50,6 +52,61 @@ int main() {
 	string p7 = "7";
 	string p8 = "8";
 	string p9 = "9";
+
+	string inform1_0 = "";
+	string inform1_1 = "";
+	string inform1_2 = "";
+	string inform1_3 = "";
+	string inform1_4 = "";
+
+	string inform2_0 = "";
+	string inform2_1 = "";
+	string inform2_2 = "";
+	string inform2_3 = "";
+	string inform2_4 = "";
+
+	string inform3_0 = "";
+	string inform3_1 = "";
+	string inform3_2 = "";
+	string inform3_3 = "";
+	string inform3_4 = "";
+
+	string inform4_0 = "";
+	string inform4_1 = "";
+	string inform4_2 = "";
+	string inform4_3 = "";
+	string inform4_4 = "";
+
+	string inform5_0 = "";
+	string inform5_1 = "";
+	string inform5_2 = "";
+	string inform5_3 = "";
+	string inform5_4 = "";
+
+	string inform6_0 = "";
+	string inform6_1 = "";
+	string inform6_2 = "";
+	string inform6_3 = "";
+	string inform6_4 = "";
+
+	string inform7_0 = "";
+	string inform7_1 = "";
+	string inform7_2 = "";
+	string inform7_3 = "";
+	string inform7_4 = "";
+
+	string inform8_0 = "";
+	string inform8_1 = "";
+	string inform8_2 = "";
+	string inform8_3 = "";
+	string inform8_4 = "";
+
+	string inform9_0 = "";
+	string inform9_1 = "";
+	string inform9_2 = "";
+	string inform9_3 = "";
+	string inform9_4 = "";
+
 
 	string color_white = "\x1b[0m";
 	string color_red = "\x1b[31m";
@@ -76,8 +133,85 @@ int main() {
 		cout << color_white << "______________________________________________[Меню]________________________________________________________" << endl << color_yellow << " 1 " << color_white << "| Начать игру " << endl << color_yellow << " 2 " << color_white << "| Статистика " << endl << color_yellow << " 3 " << color_white << "| Настройки " << endl << color_yellow << " 4 " << color_white << "| Выйти " << endl << color_yellow << " > " << color_white << "| Ввод: ";
 		answer = _getch();
 		system("cls");
+		// ИГРА
 		if (answer == '1')
 		{
+			p1 = "1";
+			p2 = "2";
+			p3 = "3";
+			p4 = "4";
+			p5 = "5";
+			p6 = "6";
+			p7 = "7";
+			p8 = "8";
+			p9 = "9";
+
+			color_p1 = color_white;
+			color_p2 = color_white;
+			color_p3 = color_white;
+			color_p4 = color_white;
+			color_p5 = color_white;
+			color_p6 = color_white;
+			color_p7 = color_white;
+			color_p8 = color_white;
+			color_p9 = color_white;
+
+			inform1_0 = "";
+			inform1_1 = "";
+			inform1_2 = "";
+			inform1_3 = "";
+			inform1_4 = "";
+
+			inform2_0 = "";
+			inform2_1 = "";
+			inform2_2 = "";
+			inform2_3 = "";
+			inform2_4 = "";
+
+			inform3_0 = "";
+			inform3_1 = "";
+			inform3_2 = "";
+			inform3_3 = "";
+			inform3_4 = "";
+
+			inform4_0 = "";
+			inform4_1 = "";
+			inform4_2 = "";
+			inform4_3 = "";
+			inform4_4 = "";
+
+			inform5_0 = "";
+			inform5_1 = "";
+			inform5_2 = "";
+			inform5_3 = "";
+			inform5_4 = "";
+
+			inform6_0 = "";
+			inform6_1 = "";
+			inform6_2 = "";
+			inform6_3 = "";
+			inform6_4 = "";
+
+			inform7_0 = "";
+			inform7_1 = "";
+			inform7_2 = "";
+			inform7_3 = "";
+			inform7_4 = "";
+
+			inform8_0 = "";
+			inform8_1 = "";
+			inform8_2 = "";
+			inform8_3 = "";
+			inform8_4 = "";
+
+			inform9_0 = "";
+			inform9_1 = "";
+			inform9_2 = "";
+			inform9_3 = "";
+			inform9_4 = "";
+
+			kol_vo = 0;
+
 			for (int i = 0; i < 9; i++)
 			{
 				cout << color_yellow << " + " << color_white << "| Крестики нолики " << endl << endl << color_yellow << " 1 " << color_white << "| Одиночная игра " << endl << color_yellow << " 2 " << color_white << "| Два игрока " << endl << endl << color_yellow << " 0 " << color_white << "| Назад " << endl << endl << color_yellow << " > " << color_white << "| Ввод: ";
@@ -92,7 +226,9 @@ int main() {
 							break;
 						}
 						kol_vo += 1;
-						cout << color_yellow << " + " << color_white << "| Крестики нолики " << endl << endl << "      " << color_p1 << p1 << color_white << " | " << color_p2 << p2 << color_white << " | " << color_p3 << p3 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p4 << p4 << color_white << " | " << color_p5 << p5 << color_white << " | " << color_p6 << p6 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p7 << p7 << color_white << " | " << color_p8 << p8 << color_white << " | " << color_p9 << p9 << color_white << endl;
+						Liar_NO = " ";
+
+						cout << color_yellow << " + " << color_white << "| Крестики нолики " << "                " << color_yellow << " + " << color_white << "| Информация " << endl << endl << "      " << color_p1 << p1 << color_white << " | " << color_p2 << p2 << color_white << " | " << color_p3 << p3 << color_white << "                       " << color_yellow << inform1_0 << color_white << inform1_1 << color1 << inform1_2 << color_white << inform1_3 << color_yellow << inform1_4 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p4 << p4 << color_white << " | " << color_p5 << p5 << color_white << " | " << color_p6 << p6 << color_white << "                       " << color_yellow << inform2_0 << color_white << inform2_1 << color2 << inform2_2 << color_white << inform2_3 << color_yellow << inform2_4 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p7 << p7 << color_white << " | " << color_p8 << p8 << color_white << " | " << color_p9 << p9 << color_white << "                       " << color_yellow << inform1_0 << color_white << inform3_1 << color1 << inform3_2 << color_white << inform3_3 << color_yellow << inform3_4 << color_white << endl << endl << "                                      " << color_yellow << inform4_0 << color_white << inform4_1 << color2 << inform4_2 << color_white << inform4_3 << color_yellow << inform4_4 << color_white << endl << endl << "                                      " << color_yellow << inform5_0 << color_white << inform5_1 << color1 << inform5_2 << color_white << inform5_3 << color_yellow << inform5_4 << color_white << endl << endl << "                                      " << color_yellow << inform6_0 << color_white << inform6_1 << color2 << inform6_2 << color_white << inform6_3 << color_yellow << inform6_4 << color_white << endl << endl << "                                      " << color_yellow << inform7_0 << color_white << inform7_1 << color1 << inform7_2 << color_white << inform7_3 << color_yellow << inform6_4 << color_white << endl << endl << "                                      " << color_yellow << inform8_0 << color_white << inform8_1 << color2 << inform8_2 << color_white << inform8_3 << color_yellow << inform8_4 << color_white << endl << endl << "                                      " << color_yellow << inform9_0 << color_white << inform9_1 << color1 << inform9_2 << color_white << inform9_3 << color_yellow << inform9_4 << color_white << endl;
 						if (kol_vo % 2 != 0)
 						{
 							// Ходит игрок 1
@@ -100,48 +236,130 @@ int main() {
 							answer2 = _getch();
 							if (answer2 == '1')
 							{
-								p1 = Figure1;
-								color_p1 = color1;
+								if (p1 != Figure2)
+								{
+									p1 = Figure1;
+									color_p1 = color1;
+								}
+								else
+								{
+									cout << endl << color2 << nik2 << ": LIAR! YOU MISS YOUR MOTION" << endl << color_white << "Enter | Продолжить: ";
+									answer5 = _getch();
+									Liar_NO = "Liar";
+
+								}
 							}
 							if (answer2 == '2')
 							{
-								p2 = Figure1;
-								color_p2 = color1;
+								if (p2 != Figure2)
+								{
+									p2 = Figure1;
+									color_p2 = color1;
+								}
+								else
+								{
+									cout << endl << color2 << nik2 << ": LIAR! YOU MISS YOUR MOTION" << endl << color_white << "Enter | Продолжить: ";
+									answer5 = _getch();
+									Liar_NO = "Liar";
+								}
 							}
 							if (answer2 == '3')
 							{
-								p3 = Figure1;
-								color_p3 = color1;
+								if (p3 != Figure2)
+								{
+									p3 = Figure1;
+									color_p3 = color1;
+								}
+								else
+								{
+									cout << endl << color2 << nik2 << ": LIAR! YOU MISS YOUR MOTION" << endl << color_white << "Enter | Продолжить: ";
+									answer5 = _getch();
+									Liar_NO = "Liar";
+								}
 							}
 							if (answer2 == '4')
 							{
-								p4 = Figure1;
-								color_p4 = color1;
+								if (p4 != Figure2)
+								{
+									p4 = Figure1;
+									color_p4 = color1;
+								}
+								else
+								{
+									cout << endl << color2 << nik2 << ": LIAR! YOU MISS YOUR MOTION" << endl << color_white << "Enter | Продолжить: ";
+									answer5 = _getch();
+									Liar_NO = "Liar";
+								}
 							}
 							if (answer2 == '5')
 							{
-								p5 = Figure1;
-								color_p5 = color1;
+								if (p5 != Figure2)
+								{
+									p5 = Figure1;
+									color_p5 = color1;
+								}
+								else
+								{
+									cout << endl << color2 << nik2 << ": LIAR! YOU MISS YOUR MOTION" << endl << color_white << "Enter | Продолжить: ";
+									answer5 = _getch();
+									Liar_NO = "Liar";
+								}
 							}
 							if (answer2 == '6')
 							{
-								p6 = Figure1;
-								color_p6 = color1;
+								if (p6 != Figure2)
+								{
+									p6 = Figure1;
+									color_p6 = color1;
+								}
+								else
+								{
+									cout << endl << color2 << nik2 << ": LIAR! YOU MISS YOUR MOTION" << endl << color_white << "Enter | Продолжить: ";
+									answer5 = _getch();
+									Liar_NO = "Liar";
+								}
 							}
 							if (answer2 == '7')
 							{
-								p7 = Figure1;
-								color_p7 = color1;
+								if (p7 != Figure2)
+								{
+									p7 = Figure1;
+									color_p7 = color1;
+								}
+								else
+								{
+									cout << endl << color2 << nik2 << ": LIAR! YOU MISS YOUR MOTION" << endl << color_white << "Enter | Продолжить: ";
+									answer5 = _getch();
+									Liar_NO = "Liar";
+								}
 							}
 							if (answer2 == '8')
 							{
-								p8 = Figure1;
-								color_p8 = color1;
+								if (p8 != Figure2)
+								{
+									p8 = Figure1;
+									color_p8 = color1;
+								}
+								else
+								{
+									cout << endl << color2 << nik2 << ": LIAR! YOU MISS YOUR MOTION" << endl << color_white << "Enter | Продолжить: ";
+									answer5 = _getch();
+									Liar_NO = "Liar";
+								}
 							}
 							if (answer2 == '9')
 							{
-								p9 = Figure1;
-								color_p9 = color1;
+								if (p9 != Figure2)
+								{
+									p9 = Figure1;
+									color_p9 = color1;
+								}
+								else
+								{
+									cout << endl << color2 << nik2 << ": LIAR! YOU MISS YOUR MOTION" << endl << color_white << "Enter | Продолжить: ";
+									answer5 = _getch();
+									Liar_NO = "Liar";
+								}
 							}
 						}
 						else if (kol_vo % 2 == 0)
@@ -151,195 +369,504 @@ int main() {
 							answer2 = _getch();
 							if (answer2 == '1')
 							{
-								p1 = Figure2;
-								color_p1 = color2;
+								if (p1 != Figure1)
+								{
+									p1 = Figure2;
+									color_p1 = color2;
+								}
+								else
+								{
+									cout << endl << color1 << nik1 << ": LIAR! YOU MISS YOUR MOTION" << endl << color_white << "Enter | Продолжить: ";
+									answer5 = _getch();
+									Liar_NO = "Liar";
+								}
 							}
 							if (answer2 == '2')
 							{
-								p2 = Figure2;
-								color_p2 = color2;
+								if (p2 != Figure1)
+								{
+									p2 = Figure2;
+									color_p2 = color2;
+								}
+								else
+								{
+									cout << endl << color1 << nik1 << ": LIAR! YOU MISS YOUR MOTION" << endl << color_white << "Enter | Продолжить: ";
+									answer5 = _getch();
+									Liar_NO = "Liar";
+								}
 							}
 							if (answer2 == '3')
 							{
-								p3 = Figure2;
-								color_p3 = color2;
+								if (p3 != Figure1)
+								{
+									p3 = Figure2;
+									color_p3 = color2;
+								}
+								else
+								{
+									cout << endl << color1 << nik1 << ": LIAR! YOU MISS YOUR MOTION" << endl << color_white << "Enter | Продолжить: ";
+									answer5 = _getch();
+									Liar_NO = "Liar";
+								}
 							}
 							if (answer2 == '4')
 							{
-								p4 = Figure2;
-								color_p4 = color2;
+								if (p4 != Figure1)
+								{
+									p4 = Figure2;
+									color_p4 = color2;
+								}
+								else
+								{
+									cout << endl << color1 << nik1 << ": LIAR! YOU MISS YOUR MOTION" << endl << color_white << "Enter | Продолжить: ";
+									answer5 = _getch();
+									Liar_NO = "Liar";
+								}
 							}
 							if (answer2 == '5')
 							{
-								p5 = Figure2;
-								color_p5 = color2;
+								if (p5 != Figure1)
+								{
+									p5 = Figure2;
+									color_p5 = color2;
+								}
+								else
+								{
+									cout << endl << color1 << nik1 << ": LIAR! YOU MISS YOUR MOTION" << endl << color_white << "Enter | Продолжить: ";
+									answer5 = _getch();
+									Liar_NO = "Liar";
+								}
 							}
 							if (answer2 == '6')
 							{
-								p6 = Figure2;
-								color_p6 = color2;
+								if (p6 != Figure1)
+								{
+									p6 = Figure2;
+									color_p6 = color2;
+								}
+								else
+								{
+									cout << endl << color1 << nik1 << ": LIAR! YOU MISS YOUR MOTION" << endl << color_white << "Enter | Продолжить: ";
+									answer5 = _getch();
+									Liar_NO = "Liar";
+								}
 							}
 							if (answer2 == '7')
 							{
-								p7 = Figure2;
-								color_p7 = color2;
+								if (p7 != Figure1)
+								{
+									p7 = Figure2;
+									color_p7 = color2;
+								}
+								else
+								{
+									cout << endl << color1 << nik1 << ": LIAR! YOU MISS YOUR MOTION" << endl << color_white << "Enter | Продолжить: ";
+									answer5 = _getch();
+									Liar_NO = "Liar";
+								}
 							}
 							if (answer2 == '8')
 							{
-								p8 = Figure2;
-								color_p8 = color2;
+								if (p8 != Figure1)
+								{
+									p8 = Figure2;
+									color_p8 = color2;
+								}
+								else
+								{
+									cout << endl << color1 << nik1 << ": LIAR! YOU MISS YOUR MOTION" << endl << color_white << "Enter | Продолжить: ";
+									answer5 = _getch();
+									Liar_NO = "Liar";
+								}
 							}
 							if (answer2 == '9')
 							{
-								p9 = Figure2;
-								color_p9 = color2;
+								if (p9 != Figure1)
+								{
+									p9 = Figure2;
+									color_p9 = color2;
+								}
+								else
+								{
+									cout << endl << color1 << nik1 << ": LIAR! YOU MISS YOUR MOTION" << endl << color_white << "Enter | Продолжить: ";
+									answer5 = _getch();
+									Liar_NO = "Liar";
+								}
 							}
 						}
-						if (p4 == p5 and p5 == p6)
+						// INFORMATION
+						if (kol_vo == 1)
 						{
-							if (p4 == Figure1)
+							inform1_0 = "+";
+							inform1_1 = " | ";
+							inform1_2 = nik1;
+							if (Liar_NO == "Liar")
 							{
-								system("cls");
-								cout << color_yellow << " + " << color_white << "| Крестики нолики " << endl << endl << "      " << color_p1 << p1 << color_white << " | " << color_p2 << p2 << color_white << " | " << color_p3 << p3 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p4 << p4 << color_white << " | " << color_p5 << p5 << color_white << " | " << color_p6 << p6 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p7 << p7 << color_white << " | " << color_p8 << p8 << color_white << " | " << color_p9 << p9 << color_white << endl;
-								cout << endl << color1 << nik1 << " WINS" << color_white << endl << endl << color_yellow << "0 | " << color_white << "Меню: ";
-								answer2 = _getch();
-								W1 += 1;
+								inform1_3 = " попытался солгать: ";
+								inform1_4 = "пропускает ход";
 							}
-							else if (p4 == Figure2)
+							else
 							{
-								system("cls");
-								cout << color_yellow << " + " << color_white << "| Крестики нолики " << endl << endl << "      " << color_p1 << p1 << color_white << " | " << color_p2 << p2 << color_white << " | " << color_p3 << p3 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p4 << p4 << color_white << " | " << color_p5 << p5 << color_white << " | " << color_p6 << p6 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p7 << p7 << color_white << " | " << color_p8 << p8 << color_white << " | " << color_p9 << p9 << color_white << endl;
-								cout << color2 << nik2 << " WINS" << color_white << endl << endl << color_yellow << "0 | " << color_white << "Меню: ";
-								answer2 = _getch();
-								W2 += 1;
+								inform1_3 = " ход на клетку: ";
+								inform1_4 = answer2;
 							}
-							kol_vo = 9;
+							Liar_NO = " ";
 						}
-						if (p3 == p5 and p5 == p7)
+						if (kol_vo == 2)
 						{
-							if (p1 == Figure1)
+							inform2_0 = "+";
+							inform2_1 = " | ";
+							inform2_2 = nik2;
+							if (Liar_NO == "Liar")
 							{
-								system("cls");
-								cout << color_yellow << " + " << color_white << "| Крестики нолики " << endl << endl << "      " << color_p1 << p1 << color_white << " | " << color_p2 << p2 << color_white << " | " << color_p3 << p3 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p4 << p4 << color_white << " | " << color_p5 << p5 << color_white << " | " << color_p6 << p6 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p7 << p7 << color_white << " | " << color_p8 << p8 << color_white << " | " << color_p9 << p9 << color_white << endl;
-								cout << endl << color1 << nik1 << " WINS" << color_white << endl << endl << color_yellow << "0 | " << color_white << "Меню: ";
-								answer2 = _getch();
-								W1 += 1;
+								inform2_3 = " попытался солгать: ";
+								inform2_4 = "пропускает ход";
 							}
-							else if (p1 == Figure2)
+							else
 							{
-								system("cls");
-								cout << color_yellow << " + " << color_white << "| Крестики нолики " << endl << endl << "      " << color_p1 << p1 << color_white << " | " << color_p2 << p2 << color_white << " | " << color_p3 << p3 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p4 << p4 << color_white << " | " << color_p5 << p5 << color_white << " | " << color_p6 << p6 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p7 << p7 << color_white << " | " << color_p8 << p8 << color_white << " | " << color_p9 << p9 << color_white << endl;
-								cout << color2 << nik2 << " WINS" << color_white << endl << endl << color_yellow << "0 | " << color_white << "Меню: ";
-								answer2 = _getch();
-								W2 += 1;
+								inform2_3 = " ход на клетку: ";
+								inform2_4 = answer2;
 							}
-							kol_vo = 9;
+							Liar_NO = " ";
 						}
-						if (p1 == p5 and p5 == p9)
+						if (kol_vo == 3)
 						{
-							if (p1 == Figure1)
+							inform3_0 = "+";
+							inform3_1 = " | ";
+							inform3_2 = nik1;
+							if (Liar_NO == "Liar")
 							{
-								system("cls");
-								cout << color_yellow << " + " << color_white << "| Крестики нолики " << endl << endl << "      " << color_p1 << p1 << color_white << " | " << color_p2 << p2 << color_white << " | " << color_p3 << p3 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p4 << p4 << color_white << " | " << color_p5 << p5 << color_white << " | " << color_p6 << p6 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p7 << p7 << color_white << " | " << color_p8 << p8 << color_white << " | " << color_p9 << p9 << color_white << endl;
-								cout << endl << color1 << nik1 << " WINS" << color_white << endl << endl << color_yellow << "0 | " << color_white << "Меню: ";
-								answer2 = _getch();
-								W1 += 1;
+								inform3_3 = " попытался солгать: ";
+								inform3_4 = "пропускает ход";
 							}
-							else if (p1 == Figure2)
+							else
 							{
-								system("cls");
-								cout << color_yellow << " + " << color_white << "| Крестики нолики " << endl << endl << "      " << color_p1 << p1 << color_white << " | " << color_p2 << p2 << color_white << " | " << color_p3 << p3 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p4 << p4 << color_white << " | " << color_p5 << p5 << color_white << " | " << color_p6 << p6 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p7 << p7 << color_white << " | " << color_p8 << p8 << color_white << " | " << color_p9 << p9 << color_white << endl;
-								cout << color2 << nik2 << " WINS" << color_white << endl << endl << color_yellow << "0 | " << color_white << "Меню: ";
-								answer2 = _getch();
-								W2 += 1;
+								inform3_3 = " ход на клетку: ";
+								inform3_4 = answer2;
 							}
-							kol_vo = 9;
+							Liar_NO = " ";
 						}
-						if (p1 == p4 and p4 == p7)
+						if (kol_vo == 4)
 						{
-							if (p1 == Figure1)
+							inform4_0 = "+";
+							inform4_1 = " | ";
+							inform4_2 = nik2;
+							if (Liar_NO == "Liar")
 							{
-								system("cls");
-								cout << color_yellow << " + " << color_white << "| Крестики нолики " << endl << endl << "      " << color_p1 << p1 << color_white << " | " << color_p2 << p2 << color_white << " | " << color_p3 << p3 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p4 << p4 << color_white << " | " << color_p5 << p5 << color_white << " | " << color_p6 << p6 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p7 << p7 << color_white << " | " << color_p8 << p8 << color_white << " | " << color_p9 << p9 << color_white << endl;
-								cout << endl << color1 << nik1 << " WINS" << color_white << endl << endl << color_yellow << "0 | " << color_white << "Меню: ";
-								answer2 = _getch();
-								W1 += 1;
+								inform4_3 = " попытался солгать: ";
+								inform4_4 = "пропускает ход";
 							}
-							else if (p1 == Figure2)
+							else
 							{
-								system("cls");
-								cout << color_yellow << " + " << color_white << "| Крестики нолики " << endl << endl << "      " << color_p1 << p1 << color_white << " | " << color_p2 << p2 << color_white << " | " << color_p3 << p3 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p4 << p4 << color_white << " | " << color_p5 << p5 << color_white << " | " << color_p6 << p6 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p7 << p7 << color_white << " | " << color_p8 << p8 << color_white << " | " << color_p9 << p9 << color_white << endl;
-								cout << color2 << nik2 << " WINS" << color_white << endl << endl << color_yellow << "0 | " << color_white << "Меню: ";
-								answer2 = _getch();
-								W2 += 1;
+								inform4_3 = " ход на клетку: ";
+								inform4_4 = answer2;
 							}
-							kol_vo = 9;
+							Liar_NO = " ";
 						}
-						if (p1 == p2 and p2 == p3)
+						if (kol_vo == 5)
 						{
-							if (p1 == Figure1)
+							inform5_0 = "+";
+							inform5_1 = " | ";
+							inform5_2 = nik1;
+							if (Liar_NO == "Liar")
 							{
-								system("cls");
-								cout << color_yellow << " + " << color_white << "| Крестики нолики " << endl << endl << "      " << color_p1 << p1 << color_white << " | " << color_p2 << p2 << color_white << " | " << color_p3 << p3 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p4 << p4 << color_white << " | " << color_p5 << p5 << color_white << " | " << color_p6 << p6 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p7 << p7 << color_white << " | " << color_p8 << p8 << color_white << " | " << color_p9 << p9 << color_white << endl;
-								cout << endl << color1 << nik1 << " WINS" << color_white << endl << endl << color_yellow << "0 | " << color_white << "Меню: ";
-								answer2 = _getch();
-								W1 += 1;
+								inform5_3 = " попытался солгать: ";
+								inform5_4 = "пропускает ход";
 							}
-							else if (p1 == Figure2)
+							else
 							{
-								system("cls");
-								cout << color_yellow << " + " << color_white << "| Крестики нолики " << endl << endl << "      " << color_p1 << p1 << color_white << " | " << color_p2 << p2 << color_white << " | " << color_p3 << p3 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p4 << p4 << color_white << " | " << color_p5 << p5 << color_white << " | " << color_p6 << p6 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p7 << p7 << color_white << " | " << color_p8 << p8 << color_white << " | " << color_p9 << p9 << color_white << endl;
-								cout << color2 << nik2 << " WINS" << color_white << endl << endl << color_yellow << "0 | " << color_white << "Меню: ";
-								answer2 = _getch();
-								W2 += 1;
+								inform5_3 = " ход на клетку: ";
+								inform5_4 = answer2;
 							}
-							kol_vo = 9;
+							Liar_NO = " ";
 						}
-						if (p9 == p8 and p8 == p7)
+						if (kol_vo == 6)
 						{
-							if (p9 == Figure1)
+							inform6_0 = "+";
+							inform6_1 = " | ";
+							inform6_2 = nik2;
+							if (Liar_NO == "Liar")
 							{
-								system("cls");
-								cout << color_yellow << " + " << color_white << "| Крестики нолики " << endl << endl << "      " << color_p1 << p1 << color_white << " | " << color_p2 << p2 << color_white << " | " << color_p3 << p3 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p4 << p4 << color_white << " | " << color_p5 << p5 << color_white << " | " << color_p6 << p6 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p7 << p7 << color_white << " | " << color_p8 << p8 << color_white << " | " << color_p9 << p9 << color_white << endl;
-								cout << endl << color1 << nik1 << " WINS" << color_white << endl << endl << color_yellow << "0 | " << color_white << "Меню: ";
-								answer2 = _getch();
-								W1 += 1;
+								inform6_3 = " попытался солгать: ";
+								inform6_4 = "пропускает ход";
 							}
-							else if (p9 == Figure2)
+							else
 							{
-								system("cls");
-								cout << color_yellow << " + " << color_white << "| Крестики нолики " << endl << endl << "      " << color_p1 << p1 << color_white << " | " << color_p2 << p2 << color_white << " | " << color_p3 << p3 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p4 << p4 << color_white << " | " << color_p5 << p5 << color_white << " | " << color_p6 << p6 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p7 << p7 << color_white << " | " << color_p8 << p8 << color_white << " | " << color_p9 << p9 << color_white << endl;
-								cout << color2 << nik2 << " WINS" << color_white << endl << endl << color_yellow << "0 | " << color_white << "Меню: ";
-								answer2 = _getch();
-								W2 += 1;
+								inform6_3 = " ход на клетку: ";
+								inform6_4 = answer2;
 							}
-							kol_vo = 9;
+							Liar_NO = " ";
 						}
-						if (p9 == p6 and p6 == p3)
+						if (kol_vo == 7)
 						{
-							if (p9 == Figure1)
+							inform7_0 = "+";
+							inform7_1 = " | ";
+							inform7_2 = nik1;
+							if (Liar_NO == "Liar")
 							{
-								system("cls");
-								cout << color_yellow << " + " << color_white << "| Крестики нолики " << endl << endl << "      " << color_p1 << p1 << color_white << " | " << color_p2 << p2 << color_white << " | " << color_p3 << p3 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p4 << p4 << color_white << " | " << color_p5 << p5 << color_white << " | " << color_p6 << p6 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p7 << p7 << color_white << " | " << color_p8 << p8 << color_white << " | " << color_p9 << p9 << color_white << endl;
-								cout << endl << color1 << nik1 << " WINS" << color_white << endl << endl << color_yellow << "0 | " << color_white << "Меню: ";
-								answer2 = _getch();
-								W1 += 1;
+								inform7_3 = " попытался солгать: ";
+								inform7_4 = "пропускает ход";
 							}
-							else if (p9 == Figure2)
+							else
 							{
-								system("cls");
-								cout << color_yellow << " + " << color_white << "| Крестики нолики " << endl << endl << "      " << color_p1 << p1 << color_white << " | " << color_p2 << p2 << color_white << " | " << color_p3 << p3 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p4 << p4 << color_white << " | " << color_p5 << p5 << color_white << " | " << color_p6 << p6 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p7 << p7 << color_white << " | " << color_p8 << p8 << color_white << " | " << color_p9 << p9 << color_white << endl;
-								cout << color2 << nik2 << " WINS" << color_white << endl << endl << color_yellow << "0 | " << color_white << "Меню: ";
-								answer2 = _getch();
-								W2 += 1;
+								inform7_3 = " ход на клетку: ";
+								inform7_4 = answer2;
 							}
-							kol_vo = 9;
+							Liar_NO = " ";
+						}
+						if (kol_vo == 8)
+						{
+							inform8_0 = "+";
+							inform8_1 = " | ";
+							inform8_2 = nik2;
+							if (Liar_NO == "Liar")
+							{
+								inform8_3 = " попытался солгать: ";
+								inform8_4 = "пропускает ход";
+							}
+							else
+							{
+								inform8_3 = " ход на клетку: ";
+								inform8_4 = answer2;
+							}
+							Liar_NO = " ";
+						}
+						if (kol_vo == 9)
+						{
+							inform9_0 = "+";
+							inform9_1 = " | ";
+							inform9_2 = nik1;
+							if (Liar_NO == "Liar")
+							{
+								inform9_3 = " попытался солгать: ";
+								inform9_4 = "пропускает ход";
+							}
+							else
+							{
+								inform9_3 = " ход на клетку: ";
+								inform9_4 = answer2;
+							}
+							Liar_NO = " ";
+						}
+						// SOMEONE WINS
+						if ((p4 == p5 and p5 == p6) or (p3 == p5 and p5 == p7) or (p1 == p5 and p5 == p9) or (p1 == p4 and p4 == p7) or (p1 == p2 and p2 == p3) or (p9 == p8 and p8 == p7) or (p9 == p6 and p6 == p3))
+						{
+							if (p4 == p5 and p5 == p6)
+							{
+								if (p4 == Figure1)
+								{
+									system("cls");
+									cout << color_yellow << " + " << color_white << "| Крестики нолики " << endl << endl << "      " << color_p1 << p1 << color_white << " | " << color_p2 << p2 << color_white << " | " << color_p3 << p3 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p4 << p4 << color_white << " | " << color_p5 << p5 << color_white << " | " << color_p6 << p6 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p7 << p7 << color_white << " | " << color_p8 << p8 << color_white << " | " << color_p9 << p9 << color_white << endl;
+									cout << endl << color1 << nik1 << " WINS" << color_white << endl << endl << color_yellow << "0 " << color_white << "| Меню" << endl << color_yellow << "> " << color_white << "| Ввод: ";
+									answer2 = _getch();
+									system("cls");
+									W1 += 1;
+									L2 += 1;
+									O1 = W1 * 5 - L1 * 6 - D1 * 1.2;
+									O2 = W2 * 5 - L2 * 5 - D2 * 1.2;
+								}
+								else if (p4 == Figure2)
+								{
+									system("cls");
+									cout << color_yellow << " + " << color_white << "| Крестики нолики " << endl << endl << "      " << color_p1 << p1 << color_white << " | " << color_p2 << p2 << color_white << " | " << color_p3 << p3 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p4 << p4 << color_white << " | " << color_p5 << p5 << color_white << " | " << color_p6 << p6 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p7 << p7 << color_white << " | " << color_p8 << p8 << color_white << " | " << color_p9 << p9 << color_white << endl;
+									cout << endl << color2 << nik2 << " WINS" << color_white << endl << endl << color_yellow << "0 " << color_white << "| Меню" << endl << color_yellow << "> " << color_white << "| Ввод: ";
+									answer2 = _getch();
+									system("cls");
+									W2 += 1;
+									L1 += 1;
+									O1 = W1 * 5 - L1 * 6 - D1 * 1.2;
+									O2 = W2 * 5 - L2 * 5 - D2 * 1.2;
+								}
+								kol_vo = 9;
+							}
+							if (p3 == p5 and p5 == p7)
+							{
+								if (p1 == Figure1)
+								{
+									system("cls");
+									cout << color_yellow << " + " << color_white << "| Крестики нолики " << endl << endl << "      " << color_p1 << p1 << color_white << " | " << color_p2 << p2 << color_white << " | " << color_p3 << p3 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p4 << p4 << color_white << " | " << color_p5 << p5 << color_white << " | " << color_p6 << p6 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p7 << p7 << color_white << " | " << color_p8 << p8 << color_white << " | " << color_p9 << p9 << color_white << endl;
+									cout << endl << color1 << nik1 << " WINS" << color_white << endl << endl << color_yellow << "0 " << color_white << "| Меню" << endl << color_yellow << "> " << color_white << "| Ввод: ";
+									answer2 = _getch();
+									system("cls");
+									W1 += 1;
+									L2 += 1;
+									O1 = W1 * 5 - L1 * 6 - D1 * 1.2;
+									O2 = W2 * 5 - L2 * 5 - D2 * 1.2;
+								}
+								else if (p1 == Figure2)
+								{
+									system("cls");
+									cout << color_yellow << " + " << color_white << "| Крестики нолики " << endl << endl << "      " << color_p1 << p1 << color_white << " | " << color_p2 << p2 << color_white << " | " << color_p3 << p3 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p4 << p4 << color_white << " | " << color_p5 << p5 << color_white << " | " << color_p6 << p6 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p7 << p7 << color_white << " | " << color_p8 << p8 << color_white << " | " << color_p9 << p9 << color_white << endl;
+									cout << endl << color2 << nik2 << " WINS" << color_white << endl << endl << color_yellow << "0 " << color_white << "| Меню" << endl << color_yellow << "> " << color_white << "| Ввод: ";
+									answer2 = _getch();
+									system("cls");
+									W2 += 1;
+									L1 += 1;
+									O1 = W1 * 5 - L1 * 6 - D1 * 1.2;
+									O2 = W2 * 5 - L2 * 5 - D2 * 1.2;
+								}
+								kol_vo = 9;
+							}
+							if (p1 == p5 and p5 == p9)
+							{
+								if (p1 == Figure1)
+								{
+									system("cls");
+									cout << color_yellow << " + " << color_white << "| Крестики нолики " << endl << endl << "      " << color_p1 << p1 << color_white << " | " << color_p2 << p2 << color_white << " | " << color_p3 << p3 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p4 << p4 << color_white << " | " << color_p5 << p5 << color_white << " | " << color_p6 << p6 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p7 << p7 << color_white << " | " << color_p8 << p8 << color_white << " | " << color_p9 << p9 << color_white << endl;
+									cout << endl << color1 << nik1 << " WINS" << color_white << endl << endl << color_yellow << "0 " << color_white << "| Меню" << endl << color_yellow << "> " << color_white << "| Ввод: ";
+									answer2 = _getch();
+									system("cls");
+									W1 += 1;
+									L2 += 1;
+									O1 = W1 * 5 - L1 * 6 - D1 * 1.2;
+									O2 = W2 * 5 - L2 * 5 - D2 * 1.2;
+								}
+								else if (p1 == Figure2)
+								{
+									system("cls");
+									cout << color_yellow << " + " << color_white << "| Крестики нолики " << endl << endl << "      " << color_p1 << p1 << color_white << " | " << color_p2 << p2 << color_white << " | " << color_p3 << p3 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p4 << p4 << color_white << " | " << color_p5 << p5 << color_white << " | " << color_p6 << p6 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p7 << p7 << color_white << " | " << color_p8 << p8 << color_white << " | " << color_p9 << p9 << color_white << endl;
+									cout << endl << color2 << nik2 << " WINS" << color_white << endl << endl << color_yellow << "0 " << color_white << "| Меню" << endl << color_yellow << "> " << color_white << "| Ввод: ";
+									answer2 = _getch();
+									system("cls");
+									W2 += 1;
+									L1 += 1;
+									O1 = W1 * 5 - L1 * 6 - D1 * 1.2;
+									O2 = W2 * 5 - L2 * 5 - D2 * 1.2;
+								}
+								kol_vo = 9;
+							}
+							if (p1 == p4 and p4 == p7)
+							{
+								if (p1 == Figure1)
+								{
+									system("cls");
+									cout << color_yellow << " + " << color_white << "| Крестики нолики " << endl << endl << "      " << color_p1 << p1 << color_white << " | " << color_p2 << p2 << color_white << " | " << color_p3 << p3 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p4 << p4 << color_white << " | " << color_p5 << p5 << color_white << " | " << color_p6 << p6 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p7 << p7 << color_white << " | " << color_p8 << p8 << color_white << " | " << color_p9 << p9 << color_white << endl;
+									cout << endl << color1 << nik1 << " WINS" << color_white << endl << endl << color_yellow << "0 " << color_white << "| Меню" << endl << color_yellow << "> " << color_white << "| Ввод: ";
+									answer2 = _getch();
+									system("cls");
+									W1 += 1;
+									L2 += 1;
+									O1 = W1 * 5 - L1 * 6 - D1 * 1.2;
+									O2 = W2 * 5 - L2 * 5 - D2 * 1.2;
+								}
+								else if (p1 == Figure2)
+								{
+									system("cls");
+									cout << color_yellow << " + " << color_white << "| Крестики нолики " << endl << endl << "      " << color_p1 << p1 << color_white << " | " << color_p2 << p2 << color_white << " | " << color_p3 << p3 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p4 << p4 << color_white << " | " << color_p5 << p5 << color_white << " | " << color_p6 << p6 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p7 << p7 << color_white << " | " << color_p8 << p8 << color_white << " | " << color_p9 << p9 << color_white << endl;
+									cout << endl << color2 << nik2 << " WINS" << color_white << endl << endl << color_yellow << "0 " << color_white << "| Меню" << endl << color_yellow << "> " << color_white << "| Ввод: ";
+									answer2 = _getch();
+									system("cls");
+									W2 += 1;
+									L1 += 1;
+									O1 = W1 * 5 - L1 * 6 - D1 * 1.2;
+									O2 = W2 * 5 - L2 * 5 - D2 * 1.2;
+								}
+								kol_vo = 9;
+							}
+							if (p1 == p2 and p2 == p3)
+							{
+								if (p1 == Figure1)
+								{
+									system("cls");
+									cout << color_yellow << " + " << color_white << "| Крестики нолики " << endl << endl << "      " << color_p1 << p1 << color_white << " | " << color_p2 << p2 << color_white << " | " << color_p3 << p3 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p4 << p4 << color_white << " | " << color_p5 << p5 << color_white << " | " << color_p6 << p6 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p7 << p7 << color_white << " | " << color_p8 << p8 << color_white << " | " << color_p9 << p9 << color_white << endl;
+									cout << endl << color1 << nik1 << " WINS" << color_white << endl << endl << color_yellow << "0 " << color_white << "| Меню" << endl << color_yellow << "> " << color_white << "| Ввод: ";
+									answer2 = _getch();
+									system("cls");
+									W1 += 1;
+									L2 += 1;
+									O1 = W1 * 5 - L1 * 6 - D1 * 1.2;
+									O2 = W2 * 5 - L2 * 5 - D2 * 1.2;
+								}
+								else if (p1 == Figure2)
+								{
+									system("cls");
+									cout << color_yellow << " + " << color_white << "| Крестики нолики " << endl << endl << "      " << color_p1 << p1 << color_white << " | " << color_p2 << p2 << color_white << " | " << color_p3 << p3 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p4 << p4 << color_white << " | " << color_p5 << p5 << color_white << " | " << color_p6 << p6 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p7 << p7 << color_white << " | " << color_p8 << p8 << color_white << " | " << color_p9 << p9 << color_white << endl;
+									cout << endl << color2 << nik2 << " WINS" << color_white << endl << endl << color_yellow << "0 " << color_white << "| Меню" << endl << color_yellow << "> " << color_white << "| Ввод: ";
+									answer2 = _getch();
+									system("cls");
+									W2 += 1;
+									L1 += 1;
+									O1 = W1 * 5 - L1 * 6 - D1 * 1.2;
+									O2 = W2 * 5 - L2 * 5 - D2 * 1.2;
+								}
+								kol_vo = 9;
+							}
+							if (p9 == p8 and p8 == p7)
+							{
+								if (p9 == Figure1)
+								{
+									system("cls");
+									cout << color_yellow << " + " << color_white << "| Крестики нолики " << endl << endl << "      " << color_p1 << p1 << color_white << " | " << color_p2 << p2 << color_white << " | " << color_p3 << p3 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p4 << p4 << color_white << " | " << color_p5 << p5 << color_white << " | " << color_p6 << p6 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p7 << p7 << color_white << " | " << color_p8 << p8 << color_white << " | " << color_p9 << p9 << color_white << endl;
+									cout << endl << color1 << nik1 << " WINS" << color_white << endl << endl << color_yellow << "0 " << color_white << "| Меню" << endl << color_yellow << "> " << color_white << "| Ввод: ";
+									answer2 = _getch();
+									system("cls");
+									W1 += 1;
+									L2 += 1;
+									O1 = W1 * 5 - L1 * 6 - D1 * 1.2;
+									O2 = W2 * 5 - L2 * 5 - D2 * 1.2;
+								}
+								else if (p9 == Figure2)
+								{
+									system("cls");
+									cout << color_yellow << " + " << color_white << "| Крестики нолики " << endl << endl << "      " << color_p1 << p1 << color_white << " | " << color_p2 << p2 << color_white << " | " << color_p3 << p3 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p4 << p4 << color_white << " | " << color_p5 << p5 << color_white << " | " << color_p6 << p6 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p7 << p7 << color_white << " | " << color_p8 << p8 << color_white << " | " << color_p9 << p9 << color_white << endl;
+									cout << endl << color2 << nik2 << " WINS" << color_white << endl << endl << color_yellow << "0 " << color_white << "| Меню" << endl << color_yellow << "> " << color_white << "| Ввод: ";
+									answer2 = _getch();
+									system("cls");
+									W2 += 1;
+									L1 += 1;
+									O1 = W1 * 5 - L1 * 6 - D1 * 1.2;
+									O2 = W2 * 5 - L2 * 5 - D2 * 1.2;
+								}
+								kol_vo = 9;
+							}
+							if (p9 == p6 and p6 == p3)
+							{
+								if (p9 == Figure1)
+								{
+									system("cls");
+									cout << color_yellow << " + " << color_white << "| Крестики нолики " << endl << endl << "      " << color_p1 << p1 << color_white << " | " << color_p2 << p2 << color_white << " | " << color_p3 << p3 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p4 << p4 << color_white << " | " << color_p5 << p5 << color_white << " | " << color_p6 << p6 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p7 << p7 << color_white << " | " << color_p8 << p8 << color_white << " | " << color_p9 << p9 << color_white << endl;
+									cout << endl << color1 << nik1 << " WINS" << color_white << endl << endl << color_yellow << "0 " << color_white << "| Меню" << endl << color_yellow << "> " << color_white << "| Ввод: ";
+									answer2 = _getch();
+									system("cls");
+									W1 += 1;
+									L2 += 1;
+									O1 = W1 * 5 - L1 * 6 - D1 * 1.2;
+									O2 = W2 * 5 - L2 * 5 - D2 * 1.2;
+								}
+								else if (p9 == Figure2)
+								{
+									system("cls");
+									cout << color_yellow << " + " << color_white << "| Крестики нолики " << endl << endl << "      " << color_p1 << p1 << color_white << " | " << color_p2 << p2 << color_white << " | " << color_p3 << p3 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p4 << p4 << color_white << " | " << color_p5 << p5 << color_white << " | " << color_p6 << p6 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p7 << p7 << color_white << " | " << color_p8 << p8 << color_white << " | " << color_p9 << p9 << color_white << endl;
+									cout << endl << color2 << nik2 << " WINS" << color_white << endl << endl << color_yellow << "0 " << color_white << "| Меню" << endl << color_yellow << "> " << color_white << "| Ввод: ";
+									answer2 = _getch();
+									system("cls");
+									W2 += 1;
+									L1 += 1;
+									O1 = W1 * 5 - L1 * 6 - D1 * 1.2;
+									O2 = W2 * 5 - L2 * 5 - D2 * 1.2;
+								}
+								kol_vo = 9;
+							}
+						}
+						// NO ONE WINS
+						else if (kol_vo == 9)
+						{
+							system("cls");
+							cout << color_yellow << " + " << color_white << "| Крестики нолики " << endl << endl << "      " << color_p1 << p1 << color_white << " | " << color_p2 << p2 << color_white << " | " << color_p3 << p3 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p4 << p4 << color_white << " | " << color_p5 << p5 << color_white << " | " << color_p6 << p6 << color_white << endl << "      _ _ _ _ _" << endl << "      " << color_p7 << p7 << color_white << " | " << color_p8 << p8 << color_white << " | " << color_p9 << p9 << color_white << endl;
+							cout << endl << color_white << "NO ONE WINS" << endl << endl << color_yellow << "0 " << color_white << "| Меню" << endl << color_yellow << "> " << color_white << "| Ввод: ";
+							answer2 = _getch();
+							system("cls");
+							D2 += 1;
+							D1 += 1;
+							O1 = W1 * 5 - L1 * 6 - D1 * 1.2;
+							O2 = W2 * 5 - L2 * 5 - D2 * 1.2;
 						}
 						system("cls");
 					}
 				}
 			}
 		}
+		// СТАТИСТИКА
 		if (answer == '2')
 		{
 			while (answer2 != '0')
@@ -349,6 +876,7 @@ int main() {
 				system("cls");
 			}
 		}
+		// НАСТРОЙКИ
 		if (answer == '3')
 		{
 			while (answer2 != '0')
@@ -363,6 +891,11 @@ int main() {
 					cin >> nik1;
 					cout << endl << color_yellow << " 1 " << color_white << "| Фигура    : ";
 					cin >> Figure1;
+					while ((Figure1 == "1" or Figure1 == "2") or (Figure1 == "3" or Figure1 == "4") or (Figure1 == "5" or Figure1 == "6") or (Figure1 == "7" or Figure1 == "8") or Figure1 == "9")
+					{
+						cout << endl << color_yellow << " ERROR " << color_white << "| Фигура    : ";
+						cin >> Figure1;
+					}
 					cout << endl << color_yellow << " 1 " << color_white << "| Цвет      : ";
 					cin >> color1;
 					if (color1 == "белый")
@@ -401,6 +934,11 @@ int main() {
 					cin >> nik2;
 					cout << endl << color_yellow << " 1 " << color_white << "| Фигура     : ";
 					cin >> Figure2;
+					while ((Figure2 == "1" or Figure2 == "2") or (Figure2 == "3" or Figure2 == "4") or (Figure2 == "5" or Figure2 == "6") or (Figure2 == "7" or Figure2 == "8") or Figure2 == "9")
+					{
+						cout << endl << color_yellow << " ERROR " << color_white << "| Фигура    : ";
+						cin >> Figure2;
+					}
 					cout << endl << color_yellow << " 1 " << color_white << "| Цвет       : ";
 					cin >> color2;
 					if (color2 == "белый")
@@ -437,6 +975,7 @@ int main() {
 				system("cls");
 			}
 		}
+		// ВЫХОД
 		if (answer == '4')
 		{
 			answer3 = 4;
@@ -444,3 +983,5 @@ int main() {
 	}
 	// недоделано
 }
+		
+
